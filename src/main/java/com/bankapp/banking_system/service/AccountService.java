@@ -147,7 +147,7 @@ return mapToResponse(account);
         creditTx.setType(TransactionType.DEPOSIT);
         creditTx.setAmount(amount);
         creditTx.setTimestamp(LocalDateTime.now());
-        creditTx.setStatus(TransactionStatus.SUCCESS);
+        creditTx.setStatus(TransactionStatus.SUCCESS);                     // Transfer validation pending
         transactionRepository.save(creditTx);                              //  abcdefghijkl
     }
 
