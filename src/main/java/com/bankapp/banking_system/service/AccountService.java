@@ -147,8 +147,8 @@ return mapToResponse(account);
         creditTx.setType(TransactionType.DEPOSIT);
         creditTx.setAmount(amount);
         creditTx.setTimestamp(LocalDateTime.now());
-        creditTx.setStatus(TransactionStatus.SUCCESS);
-        transactionRepository.save(creditTx);                              // Added validation for transfer amount
+        creditTx.setStatus(TransactionStatus.SUCCESS);             // Added validation for transfer amount
+        transactionRepository.save(creditTx);                              //  abcdefghijkl
     }
 
     private AccountResponse mapToResponse(Account account) {
