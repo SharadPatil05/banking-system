@@ -148,7 +148,7 @@ return mapToResponse(account);
         creditTx.setAmount(amount);
         creditTx.setTimestamp(LocalDateTime.now());
         creditTx.setStatus(TransactionStatus.SUCCESS);                     // Transfer validation pending
-        transactionRepository.save(creditTx);                              //  abcdefghijkl
+        transactionRepository.save(creditTx);                             // Main branch validation logic
     }
 
     private AccountResponse mapToResponse(Account account) {
