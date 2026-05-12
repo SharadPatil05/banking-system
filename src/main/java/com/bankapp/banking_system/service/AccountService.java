@@ -147,8 +147,13 @@ return mapToResponse(account);
         creditTx.setType(TransactionType.DEPOSIT);
         creditTx.setAmount(amount);
         creditTx.setTimestamp(LocalDateTime.now());
+<<<<<<< HEAD
         creditTx.setStatus(TransactionStatus.SUCCESS);                     // Transfer validation pending
         transactionRepository.save(creditTx);                             // Main branch validation logic
+=======
+        creditTx.setStatus(TransactionStatus.SUCCESS);             // Added validation for transfer amount
+        transactionRepository.save(creditTx);                             // Feature branch validation logic
+>>>>>>> feature-transfer-api
     }
 
     private AccountResponse mapToResponse(Account account) {
@@ -157,7 +162,7 @@ return mapToResponse(account);
 
         response.setId(account.getId());
         response.setAccountHolderName(account.getAccountHolderName());
-        response.setBalance(account.getBalance());
+        response.setBalance(account.getBalance());                        // Added transfer validation logic
 
         return response;
     }
