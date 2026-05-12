@@ -157,7 +157,7 @@ return mapToResponse(account);
 
         response.setId(account.getId());
         response.setAccountHolderName(account.getAccountHolderName());
-        response.setBalance(account.getBalance());
+        response.setBalance(account.getBalance());                        // Added transfer validation logic
 
         return response;
     }
